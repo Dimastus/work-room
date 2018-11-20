@@ -85,7 +85,6 @@ body {
 
     background: url('../img/bg.jpg') no-repeat;
     -webkit-background-size: 100% 95%;
-         -o-background-size: 100% 95%;
             background-size: 100% 95%;
 }
 /*start styles logo and top menu*/
@@ -94,7 +93,6 @@ body {
     display: inline-block;
 
     -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
             box-sizing: all;
     margin-top: 56px;
     margin-left: 17%;
@@ -131,43 +129,8 @@ body {
 }
 /*end styles logo and top menu*/
 /*start styles slider*/
-.header__slider {
-    width: 100%;
-    margin-top: 65px;
-}
-.left__arrow,
-.main__slide,
-.right__arrow {
-    display: inline-block;
 
-    margin-right: -4px;
 
-    vertical-align: baseline;
-}
-.left__arrow,
-.right__arrow {
-    margin: 0 4%;
-}
-.main__slide img,
-.header__text {
-    display: inline-block;
-
-    margin-right: -4px;
-
-    vertical-align: middle;
-}
-.main__slide {
-    position: relative;
-
-    width: 78%;
-}
-.main__slide img {
-    position: absolute;
-    top: 10%;
-    left: 0;
-
-    margin-left: 10%;
-}
 .header__text {
     font-family: SegoeWPN;
     line-height: 60px;
@@ -210,7 +173,6 @@ body {
     font-weight: bold;
 
     -webkit-transition: all .3s linear;
-       -moz-transition: all .3s linear;
          -o-transition: all .3s linear;
             transition: all .3s linear;
 
@@ -221,205 +183,11 @@ body {
 /*end styles slider*/
 /*end styles header*/
 
-
-
-
-
-
 /*start styles tabs*/
 .tabs {
-    max-width: 82%;
-    margin: 3% auto;
+    max-width: 96%;
+    margin: 2% auto;
     padding: 0;
-}
-.tabs ul {
-    width: 100%;
-}
-.tabs ul li {
-    display: inline-block;
-
-    width: 25%;
-    margin-right: -4px;
-
-    text-align: center;
-}
-.tabs ul li input,
-.tabs ul li img,
-.tabs ul li label {
-    display: block;
-
-    margin: 0 auto;
-
-    text-align: center;
-}
-/* Стили секций с содержанием */
-
-.tabs > section {
-    display: none;
-
-    padding: 15px;
-
-    border: 1px solid #ddd;
-    background: #fff;
-}
-.tabs > section > p {
-    line-height: 1.5;
-
-    margin: 0 0 5px;
-
-    -webkit-animation-name: fadeIn;
-       -moz-animation-name: fadeIn;
-         -o-animation-name: fadeIn;
-            animation-name: fadeIn;
-    /* прикрутим анимацию */
-    -webkit-animation-duration: 1s;
-       -moz-animation-duration: 1s;
-         -o-animation-duration: 1s;
-            animation-duration: 1s;
-
-    color: #383838;
-
-    -webkit-animation-fill-mode: both;
-       -moz-animation-fill-mode: both;
-         -o-animation-fill-mode: both;
-            animation-fill-mode: both;
-}
-/* Описываем анимацию свойства opacity */
-
-@-webkit-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@-moz-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@-o-keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Прячем чекбоксы */
-
-.tabs > input {
-    position: absolute;
-
-    display: none;
-}
-/* Стили переключателей вкладок (табов) */
-
-.tabs > label {
-    font-weight: 600;
-
-    position: relative;
-
-    display: inline-block;
-
-    margin: 0 -4px -1px 0;
-    padding: 17% 8.82% 15px;
-
-    text-align: center;
-
-    color: #aaa;
-    border-width: 1px 1px 1px 1px;
-    -webkit-border-radius: 3px 3px 0 0;
-            border-radius: 3px 3px 0 0;
-    background: #fff;
-}
-/* Шрифт-иконки от Font Awesome в формате Unicode */
-
-.tabs > label:before {
-    margin-right: 10px;
-}
-.tabs > label[for*='1']:before {
-    position: absolute;
-    top: 6%;
-    left: 0;
-
-    width: 100%;
-
-    content: url('../img/Shape-10.png');
-}
-
-.tabs > label[for*='2']:before {
-    content: '\f17a';
-}
-
-.tabs > label[for*='3']:before {
-    content: '\f13b';
-}
-
-.tabs > label[for*='4']:before {
-    content: '\f13c';
-}
-/* Изменения стиля переключателей вкладок при наведении */
-
-.tabs > label:hover {
-    cursor: pointer;
-
-    color: #888;
-}
-/* Стили для активной вкладки */
-
-.tabs > input:checked + label {
-    color: #555;
-    border: 1px solid #ddd;
-    border-bottom: 1px solid #fff;
-    background: #fff;
-}
-/* Активация секций с помощью псевдокласса :checked */
-
-#tab1:checked ~ #content-tab1,
-#tab2:checked ~ #content-tab2,
-#tab3:checked ~ #content-tab3,
-#tab4:checked ~ #content-tab4 {
-    display: block;
-}
-/* Убираем текст с переключателей 
-    * и оставляем иконки на малых экранах
-    */
-
-@media screen and (max-width: 680px) {
-    .tabs > label {
-        font-size: 0;
-    }
-    .tabs > label:before {
-        font-size: 18px;
-
-        margin: 0;
-    }
-}
-/* Изменяем внутренние отступы 
-    *  переключателей для малых экранов
-    */
-
-@media screen and (max-width: 400px) {
-    .tabs > label {
-        padding: 15px;
-    }
 }
 /*end styles tabs*/
 
@@ -529,7 +297,6 @@ hr {
 .block__forms form input[type='login'],
 .block__forms form input[type='password'] {
     -webkit-box-sizing: border-box;
-       -moz-box-sizing: border-box;
             box-sizing: border-box;
     padding-left: 15px;
 }
@@ -678,16 +445,7 @@ hr {
     }
     /*end styles logo and top menu*/
     /*start styles slider*/
-    .main__slide {
-        width: 77%;
-    }
-    .main__slide img {
-        position: absolute;
-        top: 8%;
-        left: 0;
-
-        margin-left: 10%;
-    }
+    
     /*end styles slider*/
     /*end styles header*/
     /*start styles section__choose*/
@@ -725,16 +483,7 @@ hr {
     }
     /*end styles logo and top menu*/
     /*start styles slider*/
-    .main__slide {
-        width: 77%;
-    }
-    .main__slide img {
-        position: absolute;
-        top: 7%;
-        left: 0;
 
-        margin-left: 10%;
-    }
     /*end styles slider*/
     /*end styles header*/
     /*start styles section__choose*/
@@ -771,17 +520,7 @@ hr {
     }
     /*end styles logo and top menu*/
     /*start styles slider*/
-    .left__arrow,
-    .right__arrow {
-        margin: 0 3%;
-    }
-    .main__slide img {
-        position: absolute;
-        top: 5%;
-        left: 0;
 
-        margin-left: 10%;
-    }
     /*end styles slider*/
     /*end styles header*/
     /*start styles section__choose*/
@@ -818,17 +557,6 @@ hr {
     }
     /*end styles logo and top menu*/
     /*start styles slider*/
-    .left__arrow,
-    .right__arrow {
-        margin: 0 3%;
-    }
-    .main__slide img {
-        position: absolute;
-        top: 2%;
-        left: 0;
-
-        margin-left: 10%;
-    }
     .header__text {
         margin-left: 53%;
     }
@@ -892,7 +620,6 @@ hr {
         padding: 1%;
 
         -webkit-transition: all .7s;
-           -moz-transition: all .7s;
              -o-transition: all .7s;
                 transition: all .7s;
         text-align: center;
@@ -923,25 +650,11 @@ hr {
         font-size: 2.4em;
 
         -webkit-transition: all .4s;
-           -moz-transition: all .4s;
              -o-transition: all .4s;
                 transition: all .4s;
     }
     /*end styles logo and top menu*/
     /*start styles slider*/
-    .main__slide {
-        position: relative;
-
-        width: 68%;
-    }
-    .main__slide img {
-        position: absolute;
-        top: 0;
-        left: -5%;
-
-        max-width: 50%;
-        margin-left: 10%;
-    }
     .header__text {
         margin-left: 55%;
 
@@ -1089,13 +802,11 @@ hr {
         height: 30px;
 
         -webkit-transition: all .3s linear .7s;
-           -moz-transition: all .3s linear .7s;
              -o-transition: all .3s linear .7s;
                 transition: all .3s linear .7s;
     }
     .main__footer > ul > li:not(:last-child) ul {
         -webkit-transition: all .8s linear .1s;
-           -moz-transition: all .8s linear .1s;
              -o-transition: all .8s linear .1s;
                 transition: all .8s linear .1s;
 
@@ -1108,13 +819,11 @@ hr {
 
         cursor: pointer;
         -webkit-transition: all .5s linear .1s;
-           -moz-transition: all .5s linear .1s;
              -o-transition: all .5s linear .1s;
                 transition: all .5s linear .1s;
     }
     .main__footer > ul > li:not(:last-child):hover ul {
         -webkit-transition: all .8s linear .1s;
-           -moz-transition: all .8s linear .1s;
              -o-transition: all .8s linear .1s;
                 transition: all .8s linear .1s;
 
@@ -1123,95 +832,52 @@ hr {
     /*end styles footer*/
 }
 @media screen and (max-width: 699px) {
-	/*start styles slider*/
-	.header__slider {
-	    width: 100%;
-	    margin-top: 65px;
-	}
-	.left__arrow,
-	.main__slide,
-	.right__arrow {
-	    display: inline-block;
+    /*start styles slider*/
+    .header__text {
+        display: block;
 
-	    margin-right: -4px;
+        text-shadow: 0 1px 5px rgba(250, 250, 250, .3);
+    }
+    .header__text h1 {
+        font-size: 25px;
+        font-weight: bold;
 
-	    vertical-align: baseline;
-	}
-	.left__arrow,
-	.right__arrow {
-	    margin: 0 4%;
-	}
-	.main__slide img,
-	.header__text {
-	    display: inline-block;
+        color: #fff;
+    }
+    .header__text h2 {
+        font-size: 44px;
+        font-weight: bold;
 
-	    margin-right: -4px;
+        color: #fff;
+    }
+    .header__text button {
+        font-size: 1.5em;
 
-	    vertical-align: middle;
-	}
-	.main__slide {
-	    position: relative;
+        width: 150px;
+        height: 50px;
+        margin-top: 30px;
+        margin-bottom: 50px;
 
-	    width: 78%;
-	}
-	.main__slide img {
-	    position: absolute;
-	    top: 10%;
-	    left: 0;
-		max-width: 40%;
-	    margin-left: 10%;
-	}
-	.header__text {
-	    font-family: SegoeWPN;
-	    line-height: 60px;
+        cursor: pointer;
 
-	    margin-top: 40%;
-	    margin-bottom: 3%;
-	    margin-left: 0;
+        color: #fff;
+        border: 3px solid rgba(0, 0, 0, .45);
+        -webkit-border-radius: 3px;
+                border-radius: 3px;
+        background: #175b3b;
+    }
+    .header__text button:hover {
+        font-weight: bold;
 
-	    text-shadow: 0 1px 5px rgba(250, 250, 250, .3);
-	}
-	.header__text h1 {
-	    font-size: 65px;
-	    font-weight: bold;
+        -webkit-transition: all .3s linear;
+             -o-transition: all .3s linear;
+                transition: all .3s linear;
 
-	    color: #fff;
-	}
-	.header__text h2 {
-	    font-size: 44px;
-	    font-weight: bold;
-
-	    color: #fff;
-	}
-	.header__text button {
-	    font-size: 1.5em;
-
-	    width: 150px;
-	    height: 50px;
-	    margin-top: 30px;
-	    margin-bottom: 50px;
-
-	    cursor: pointer;
-
-	    color: #fff;
-	    border: 3px solid rgba(0, 0, 0, .45);
-	    -webkit-border-radius: 3px;
-	            border-radius: 3px;
-	    background: #175b3b;
-	}
-	.header__text button:hover {
-	    font-weight: bold;
-
-	    -webkit-transition: all .3s linear;
-	       -moz-transition: all .3s linear;
-	         -o-transition: all .3s linear;
-	            transition: all .3s linear;
-
-	    color: #000;
-	    background: #825b3b;
-	    text-shadow: 0 0 10px #825b0b;
-	}
-	/*end styles slider*/
+        color: #000;
+        background: #825b3b;
+        text-shadow: 0 0 10px #825b0b;
+    }
+    /*end styles slider*/
 }
 @media screen and (max-width: 440px) {
     /*start styles header*/
@@ -1245,7 +911,6 @@ hr {
         padding: 1%;
 
         -webkit-transition: all .7s;
-           -moz-transition: all .7s;
              -o-transition: all .7s;
                 transition: all .7s;
         text-align: center;
@@ -1276,27 +941,13 @@ hr {
         font-size: 2.4em;
 
         -webkit-transition: all .4s;
-           -moz-transition: all .4s;
              -o-transition: all .4s;
                 transition: all .4s;
     }
     /*end styles logo and top menu*/
     /*start styles slider*/
-    .main__slide {
-        position: relative;
-
-        width: 68%;
-    }
-    .main__slide img {
-        position: absolute;
-        top: 0;
-        left: -5%;
-
-        max-width: 50%;
-        margin-left: 10%;
-    }
     .header__text {
-        margin-left: 55%;
+        display: inline-block;
 
         text-shadow: 0 1px 5px rgba(250, 250, 250, .3);
     }
@@ -1393,4 +1044,4 @@ hr {
         background: rgba(0, 120, 0, .8);
     }
     /*end styles section__forms*/
-}
+}}
